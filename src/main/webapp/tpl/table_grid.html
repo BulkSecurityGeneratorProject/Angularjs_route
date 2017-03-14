@@ -1,0 +1,16 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h1 class="m-n font-thin h3">网关详情</h1>
+</div>
+<div class="wrapper-md" ng-controller="GridDemoCtrl">
+  <div class="panel panel-default">
+    <div>
+      <!-- Contextual button for informational alert messages -->
+      <ul class="list-inline">
+        <li><a ui-sref="app.table.creategate"><button type="button" class="btn btn-default Gateway_add" style="margin:10px;color:#1d75b3;" >添加网关</button></a></li>
+      </ul>
+    </div>
+    <div class="table-responsive">
+      <div ng-grid="gridOptions" style="min-height:520px;"></div>
+    </div>
+  </div>
+</div>

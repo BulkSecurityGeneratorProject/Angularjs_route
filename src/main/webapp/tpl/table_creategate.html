@@ -1,0 +1,89 @@
+<!-- Content Wrapper. Contains page content -->
+    <!-- Content Header (Page header) -->
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3" style="display:inline-block">用户创建</h1>
+        <a ui-sref="app.table.grid"><button class="btn btn-default" style="float:right">返回</button></a>
+    </div>
+
+    <!-- Main content -->
+    <!-- form start -->
+<div class="wrapper-md">
+    <form class="form-horizontal" ng-controller="Edit" style=""  >
+        <div class="box-body">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label ng-valid " ng-model="name">网关名</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="name" placeholder="AAAA" required="required" ng-model="name">
+                    </div>
+                                        <label for="tenant_id" class="col-sm-2 control-label ">ID</label>
+                                        <div class="col-sm-2">
+                                            <input type="text" class="form-control" id="tenant_id" placeholder="123456" ng-model="id">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label  for="description" class="col-sm-2 control-label">网关描述</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" rows="3" placeholder="Enter ..." id="description" ng-model="description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gateway_type_id" class="col-sm-2 control-label">网关类型</label>
+                                        <div class="col-sm-2">
+                                            <select ng-model="gatewaytype"  ng-options="gatewaytype.name   for gatewaytype in gatewaytypes ">
+                                             <option  value="">请选择</option><!-- 这里是重点，必须将value值设置成空字符串，否则第一个选项还是会留空白出来--> 
+                                            </select>
+                                        </div>
+                                        <label for="workgroup_id" class="col-sm-2 control-label">群组</label>
+										 <div class="col-sm-2">
+                                            <select ng-model="workgroup"  ng-options="workgroup.name   for workgroup in workgroups ">
+                                             <option  value="">请选择</option><!-- 这里是重点，必须将value值设置成空字符串，否则第一个选项还是会留空白出来--> 
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer" >
+                                    <button type="submit" class="btn btn-default " ng-click="Clear()">清除</button>
+                                    <button type="submit" class="btn btn-default pull-right " ng-click="Ok()" ng-disabled="!name || !gatewaytype || !workgroup">创建</button>
+                                </div>
+                                <!-- /.box-footer -->
+                            </form>
+                        <!--box-body-->
+</div>
+                    <!-- /.box -->
+
+<script>
+//    //这是创建网关页中的相关事件
+//    app.controller("Edit",["$scope","$http","$window",function($scope,$http,$window){
+////创建按钮的单击事件
+//        $scope.Ok=function(){
+//            $http({
+//                method:'POST',
+//                url:"http://localhost:63342/example/demo-01/build/js/gateway_add.json",
+//                data:JSON.stringify({
+//                    "name":$scope.name,
+//                    "tenant_id":$scope.tenant_id,
+//                    "description":$scope.description,
+//                    "gateway_type_id":$scope.gateway_type_id,
+//                    "workgroup_id":$scope.workgroup_id
+//                })
+//            }).then(function(result){
+//                console.log("111");
+//                //跳转到主页面，并且刷新数据
+//            }).then(function(result){
+//                console.log("222");
+//                //错误内容
+//            })
+//        }
+////清除按钮的单击事件
+//        $scope.Clear=function(){
+//            $scope.name="";
+//            $scope.tenant_id="";
+//            $scope.description="";
+//            $scope.gateway_type_id=$scope.options[0];
+//            $scope.workgroup_id="";
+//        }
+//
+//    }])
+</script>
