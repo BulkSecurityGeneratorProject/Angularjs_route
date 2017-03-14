@@ -5,9 +5,9 @@
         .module('gatewayApp')
         .controller('WorkgroupIotDetailController', WorkgroupIotDetailController);
 
-    WorkgroupIotDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Workgroup', 'GatewayType', 'Gateway', 'MonitorPoint', 'Tenant'];
+    WorkgroupIotDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'previousState', 'entity', 'Workgroup', 'GatewayType', 'Gateway', 'MonitorPoint'];
 
-    function WorkgroupIotDetailController($scope, $rootScope, $stateParams, previousState, entity, Workgroup, GatewayType, Gateway, MonitorPoint, Tenant) {
+    function WorkgroupIotDetailController($scope, $rootScope, $stateParams, previousState, entity, Workgroup, GatewayType, Gateway, MonitorPoint) {
         var vm = this;
 
         vm.workgroup = entity;

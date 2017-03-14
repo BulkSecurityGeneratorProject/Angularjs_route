@@ -32,18 +32,6 @@
                     />
         </div>
 
-        <div class="form-group">
-            <label data-translate="gatewayApp.workgroup.tenant" for="field_tenant">Tenant</label>
-            <select class="form-control" id="field_tenant" name="tenant" ng-model="vm.workgroup.tenantId" ng-options="tenant.id as tenant.name for tenant in vm.tenants"             required>
-                <option value=""></option>
-            </select>
-        </div>
-        <div ng-show="editForm.tenant.$invalid">
-            <p class="help-block"
-                ng-show="editForm.tenant.$error.required" data-translate="entity.validation.required">
-                This field is required.
-            </p>
-        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

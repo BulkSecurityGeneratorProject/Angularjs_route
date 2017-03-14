@@ -16,8 +16,7 @@
             "description": "Description",
             "gatewayType": "Gateway Type",
             "gateway": "Gateway",
-            "monitorPoint": "Monitor Point",
-            "tenant": "Tenant"
+            "monitorPoint": "Monitor Point"
         }
     },
     "configApp": {

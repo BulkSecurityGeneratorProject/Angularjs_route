@@ -4,7 +4,7 @@ describe('Controller Tests', function() {
 
     describe('Workgroup Management Detail Controller', function() {
         var $scope, $rootScope;
-        var MockEntity, MockPreviousState, MockWorkgroup, MockGatewayType, MockGateway, MockMonitorPoint, MockTenant;
+        var MockEntity, MockPreviousState, MockWorkgroup, MockGatewayType, MockGateway, MockMonitorPoint;
         var createController;
 
         beforeEach(inject(function($injector) {
@@ -16,7 +16,6 @@ describe('Controller Tests', function() {
             MockGatewayType = jasmine.createSpy('MockGatewayType');
             MockGateway = jasmine.createSpy('MockGateway');
             MockMonitorPoint = jasmine.createSpy('MockMonitorPoint');
-            MockTenant = jasmine.createSpy('MockTenant');
             
 
             var locals = {
@@ -27,8 +26,7 @@ describe('Controller Tests', function() {
                 'Workgroup': MockWorkgroup,
                 'GatewayType': MockGatewayType,
                 'Gateway': MockGateway,
-                'MonitorPoint': MockMonitorPoint,
-                'Tenant': MockTenant
+                'MonitorPoint': MockMonitorPoint
             };
             createController = function() {
                 $injector.get('$controller')("WorkgroupIotDetailController", locals);

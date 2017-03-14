@@ -7,7 +7,6 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "数据",
-                "tenantIot": "Tenant",
                 "workgroupIot": "Workgroup",
                 "gatewayTypeIot": "Gateway Type",
                 "gatewayIot": "Gateway",

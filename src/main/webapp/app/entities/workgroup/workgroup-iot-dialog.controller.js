@@ -5,9 +5,9 @@
         .module('gatewayApp')
         .controller('WorkgroupIotDialogController', WorkgroupIotDialogController);
 
-    WorkgroupIotDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Workgroup', 'GatewayType', 'Gateway', 'MonitorPoint', 'Tenant'];
+    WorkgroupIotDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Workgroup', 'GatewayType', 'Gateway', 'MonitorPoint'];
 
-    function WorkgroupIotDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Workgroup, GatewayType, Gateway, MonitorPoint, Tenant) {
+    function WorkgroupIotDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Workgroup, GatewayType, Gateway, MonitorPoint) {
         var vm = this;
 
         vm.workgroup = entity;
@@ -16,7 +16,6 @@
         vm.gatewaytypes = GatewayType.query();
         vm.gateways = Gateway.query();
         vm.monitorpoints = MonitorPoint.query();
-        vm.tenants = Tenant.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
