@@ -18,13 +18,6 @@
             "relationshipName": "monitorPoint",
             "otherEntityName": "monitorPoint",
             "otherEntityRelationshipName": "workgroup"
-        },
-        {
-            "relationshipType": "many-to-one",
-            "relationshipValidateRules": "required",
-            "relationshipName": "tenant",
-            "otherEntityName": "tenant",
-            "otherEntityField": "name"
         }
     ],
     "fields": [
